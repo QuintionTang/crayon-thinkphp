@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-sm-8">
+        <form name="searchform" method="get" class="form-inline search-form" >
+            <input type="hidden" name="c" value="{:CONTROLLER_NAME}" />
+            <input type="hidden" name="a" value="{:ACTION_NAME}" />
+            <input type="hidden" name="feature_id" value="{$feature_id}"/>
+
+        </form>
+    </div>
+    <div class="col-sm-4">
+        <div class="text-sm-right">
+            <if condition="$panel_buttons neq ''">
+                <volist name="panel_buttons" id="panel_button">
+                    <if condition="$panel_button['acttype'] eq 'ajax'">
+                        <php>
+                            $action_alias = $panel_button["alias"];
+                            if ($action_alias=="clear"){
+                        </php>
+                        <a href="#{$panel_button.alias}-modal" class="btn btn-danger btn-xs waves-effect waves-light events-button ml-2" data-acttype="ajax" data-uri="{$panel_button.uri}"
+                        data-animation="blur" data-confirm="confirm" data-msg="确定要{$panel_button.title}记录吗？" data-title="{$panel_button.title}" data-operation="add"
+                        data-plugin="custommodal" data-overlaycolor="#18242b">
+                        <i class="{$panel_button.icon_font} mr-2"></i>
+                        {$panel_button.title}</a>
+                        <php>
+                        } else{
+                        </php>
+                        <a href="#{$panel_button.alias}-modal" class="btn btn-primary btn-xs waves-effect waves-light events-button ml-2" data-acttype="ajax" data-uri="{$panel_button.uri}"
+                        data-animation="blur" data-title="{$panel_button.title}" data-operation="add"
+                        data-plugin="custommodal" data-overlaycolor="#18242b">
+                        <i class="{$panel_button.icon_font} mr-2"></i>
+                        {$panel_button.title}</a>
+                        <php>
+                        }
+                        </php>
+                    </if>
+                </volist>
+            </if>
+        </div>
+    </div>
+</div>

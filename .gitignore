@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.sass-cache
+data/runtime
+src/**/scripts/vendor/
+src/**/scss/vendor/
+Thumbs.db
+node_modules

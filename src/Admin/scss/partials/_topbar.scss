@@ -1,0 +1,132 @@
+//
+// Topbar
+//
+.topbar {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    background: $bg-navbar;
+    .topbar-left {
+        background-color: $bg-logo;
+        float: left;
+        height: $topbar-height;
+        position: relative;
+        width: $topbar-left-width;
+        z-index: 1;
+        .logo {
+            line-height: $topbar-height;
+            .logo-sm {
+                height: 50px;
+            }
+            .logo-lg {
+                height: 14px;
+                margin-left: 2px;
+            }
+        }
+    }
+}
+
+.topbar-main {
+    background: $bg-navbar;
+    width: 1380px;
+    margin: 0 auto;
+    min-height: $topbar-height;
+    position: relative;
+    box-shadow: $shadow;
+    padding: 0 12px;
+    .nav-link {
+        padding: 0 0.75rem;
+        color: $body-text;
+        line-height: $topbar-height;
+        max-height: $topbar-height;
+        .nav-icon {
+            font-size: 18px;
+        }
+    }
+    .dropdown-toggle {
+        &:after {
+            content: initial;
+        }
+    }
+    .topbar-nav {
+        li {
+            float: left;
+            &.show {
+                .nav-link {
+                    background-color: lighten($bg-navbar, 3%);
+                    color: $body-text;
+                }
+            }
+        }
+    }
+}
+
+.button-menu-mobile {
+    border: none;
+    color: $white;
+    width: 60px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.nav-user {
+    .nav-user-name {
+        vertical-align: middle;
+    }
+    img {
+        height: 40px;
+        width: 40px;
+    }
+}
+@media (max-width: 1024px) {
+    .topbar {
+        .topbar-left {
+            width: 0;
+            .logo-lg {
+                display: none;
+            }
+        }
+        .topbar-main {
+            margin-left: 0;
+            padding: 0 12px;
+            width: 100%;
+        }
+        .app-search {
+            .form-control,
+            .form-control:focus{
+                width: 230px;
+            }  
+        }
+    }
+    
+    .enlarge-menu {
+        .topbar {
+            .topbar-left{
+                margin-left: 0;
+                width: 70px;
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 767px){
+    .hidden-sm {
+        display: none;
+    }
+    .topbar-main{
+        padding: 0 12px;
+    }
+}
+
+@media (max-width: 375px){
+    
+    .page-title-box {
+        .breadcrumb{
+            display: none;
+        }
+    }
+}
+

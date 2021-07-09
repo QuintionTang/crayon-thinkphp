@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+<include file="public:head" />
+
+<body class="account-body accountbg">
+    <div class="row vh-100 ">
+        <div class="col-12 align-self-center">
+            <div class="auth-page" id="auth-page">
+                <div class="card auth-card shadow-lg">
+                    <div class="card-body">
+                        <div class="px-3">
+                            <div class="auth-logo-box">
+                                <a href="javascript:;" class="logo logo-admin">
+                                    <img src="__public__images/logo.png" alt="{$settings.site_name}" class="auth-logo">
+                                </a>
+                            </div>
+
+                            <div class="text-center auth-logo-text">
+                                <h4 class="mt-0 mb-3 mt-2">{$settings.site_name}</h4>
+                                <p class="text-muted mb-0">管理平台</p>
+                            </div>
+
+
+                            <form class="form-horizontal auth-form my-4 form-parsley" action="{:U('index/login')}" method="post" id="login-form">
+                                <include file="public:alert" />
+                                <div class="hidden-inputs">
+                                    <input type="text" data-type="number" name="ajax" class="form-control" value="1" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="username">用户名称</label>
+                                    <div class="input-group mb-3">
+                                        <span class="auth-form-icon">
+                                            <i class="dripicons-user"></i>
+                                        </span>
+                                        <input type="text" autocomplete="off" class="form-control" id="username" name="username" placeholder="用户名称" required data-parsley-required-message="请输入登录用户名称" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="password">登录密码</label>
+                                    <div class="input-group mb-3">
+                                        <span class="auth-form-icon">
+                                            <i class="dripicons-lock"></i>
+                                        </span>
+                                        <input type="password" class="form-control" id="password" name="password" placeholder="登录密码" required data-parsley-required-message="请输入登录密码" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group row mt-4">
+                                    <div class="col-sm-6">
+                                        <div class="custom-control custom-switch switch-success">
+                                            <input type="checkbox" class="custom-control-input" id="customSwitchSuccess">
+                                            <label class="custom-control-label text-muted" for="customSwitchSuccess">记住登录状态</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group mb-0 row">
+                                    <div class="col-12 mt-2">
+                                        <button class="btn btn-primary btn-round btn-block waves-effect waves-light ladda-button" type="submit">登录 <i class="fas fa-sign-in-alt ml-1"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <include file="public:scripts" />
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>{:L('page_msg')}_{$settings.site_name}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="" name="description" />
+        <link rel="shortcut icon" href="__public__images/favicon.ico" />
+        <link href="__public__css/master.css?v=1625844896817" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body class="account-body accountbg">
+        <div class="row vh-100 ">
+            <div class="col-12 align-self-center">
+                <div class="auth-page">
+
+                </div>
+            </div>
+        </div>
+        <!-- jQuery  -->
+        <script src="__public__scripts/vendor.min.js?v=1625844896817"></script>
+        <!-- App js -->
+        <script type="text/javascript">
+            swal.fire({
+                title: "{$error}",
+                html: ' {:L('sys_will')}<span style="color:blue;font-weight:bold">{$waitSecond}</span>{:L('page_jump_tip')}<a href="{$jumpUrl}">{:L('here')}</a>',
+                type: 'error',
+                showCancelButton: false,
+                showConfirmButton: false,
+                closeOnConfirm: false,
+                animation: false
+            });
+            setTimeout(function () {
+                swal.close();
+                location.href = '{$jumpUrl}';
+            }, 3000);
+        </script>
+
+    </body>
+
+</html>

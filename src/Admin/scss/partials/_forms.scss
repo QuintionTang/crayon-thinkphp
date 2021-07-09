@@ -1,0 +1,219 @@
+//
+// Forms
+// 
+
+label {
+  font-weight: 400;
+  color: $label;
+  font-size: 13px;
+}
+.custom-control-label{
+  padding-top: 2px;
+}
+.form-control {
+  font-size: $font-size-base;
+  border: 1px solid lighten($gray-300, 4%);
+  height: calc(2.3rem + 2px);
+  color: $form-control;
+  &:focus {
+    border-color: rgba($primary, 0.5);
+    box-shadow: none;
+  }
+}
+
+.input-group-text{
+  font-size: $font-size-base;
+  background-color: $gray-100;
+  border: 1px solid lighten($gray-300, 4%);
+}
+.custom-file-input,
+.custom-file-label{
+  height: calc(2.3rem + 1px);
+  line-height: 26px;
+}
+.custom-file-label::after{
+  height: calc(1.5em + 15px);
+  line-height: 24px;
+}
+.form-group{
+  margin-bottom: 20px;
+}
+.custom-select{
+  width:auto!important;
+  &:focus{
+    border-color: rgba($primary, 0.5);
+    box-shadow: none;
+  }
+}
+
+.select2-container {
+    min-width: 200px;
+}
+.modal-body {
+    .select2-container {
+        z-index: 10005;
+    }
+}
+.custombox-lock {
+    .select2-container {
+        z-index: 10005;
+    }
+}
+.select2-container .select2-selection--single {
+    height: 38px;
+}
+.col-form-label {
+    text-align: right;
+    line-height: calc(1.8em);
+    &.middle {
+        line-height: 24px;
+    }
+}
+.select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: 1px solid #e8ebf3;
+    color: #2f5275;
+    padding: 4px;
+    border-radius: 4px;
+}
+.select2-container--default
+    .select2-selection--single
+    .select2-selection__arrow {
+    top: 6px;
+}
+.input-group-sm {
+    .select2-container {
+        z-index: 0;
+    }
+    .select2-container .select2-selection--single {
+        height: 31px;
+    }
+    .select2-container--default
+        .select2-selection--single
+        .select2-selection__arrow {
+        top: 1px;
+    }
+    .select2-container--default .select2-selection--single {
+        padding: 2px;
+    }
+    .select2-container--default
+        .select2-selection--single
+        .select2-selection__rendered {
+        line-height: 24px;
+        font-size: 0.875rem;
+    }
+}
+.input-group-hover {
+    border-radius: 4px;
+    overflow: hidden;
+    .input-group-text {
+        padding: 0rem 0.75rem !important;
+        margin-bottom: 0;
+    }
+    &:disabled,
+    &.disabled {
+        .input-group-append,
+        .form-control {
+            background-color: #e9ecef;
+            opacity: 1;
+        }
+        background-color: #e9ecef;
+        opacity: 1;
+    }
+    &:not(:disabled):not(.disabled) {
+        &:hover,
+        &:focus {
+            .form-control,
+            .input-group-text {
+                border-color: rgba(77, 121, 246, 0.5);
+                box-shadow: none;
+            }
+            .input-group-text {
+                background-color: rgba(77, 121, 246, 0.8) !important;
+                color: #fff;
+            }
+        }
+    }
+}
+.custom-control-input:checked~.custom-control-indicator {
+  background-color: $primary;
+}
+
+.custom-control-input:focus~.custom-control-indicator {
+  -webkit-box-shadow: 0 0 0 1px $white, 0 0 0 3px $primary;
+  box-shadow: 0 0 0 1px $white, 0 0 0 3px $primary;
+}
+
+.has-success {
+  .form-control {
+    border-color: $success;
+    box-shadow: none;
+  }
+}
+
+.has-warning {
+  .form-control {
+    border-color: $warning;
+    box-shadow: none;
+  }
+}
+
+.has-error {
+  .form-control {
+    border-color: $danger;
+    box-shadow: none;
+  }
+}
+
+.input-group-addon {
+  border-radius: 2px;
+  border: 1px solid $light;
+}
+.col-form-label{
+  text-align: right;
+}
+
+.form-control.is-valid:focus, 
+.custom-select.is-valid:focus, 
+.was-validated .custom-select:valid:focus {
+  border-color: $success;
+  box-shadow: none;
+}
+.custom-select.is-invalid:focus, 
+.was-validated .custom-select:invalid:focus {
+  border-color: $danger;
+  box-shadow:none;
+}
+.custom-select{
+  font-size: 13px;
+  height: 38px;
+}
+.custom-file-input.is-invalid:focus~.custom-file-label, 
+.was-validated .custom-file-input:invalid:focus~.custom-file-label,
+.form-control.is-invalid:focus, 
+.was-validated .form-control:invalid:focus {
+  border-color: $danger;
+  box-shadow: none;
+}
+.custom-file-input:focus~.custom-file-label{
+  border-color: rgba($primary, 0.5);
+  box-shadow: none;
+}
+
+
+dt {
+  font-weight: 600;
+}
+
+.form-check-inline{
+  margin-top:5px;
+}
+.hidden-inputs {
+  width: 0px;
+  height: 0px;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+  position: relative;
+  border: none;
+}
