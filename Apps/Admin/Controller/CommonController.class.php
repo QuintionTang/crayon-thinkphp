@@ -155,7 +155,7 @@ class CommonController extends Controller {
                 $activeSheet->getStyle($currentCellName.'2')->getFont()->setSize(12)->setBold(true);
                 $activeSheet->getStyle($currentCellName.'2')->applyFromArray($styleThinBlackBorderOutline);  
                 $activeSheet->getStyle($currentCellName.'2')->getAlignment()->setVertical(\PHPExcel_Style_Alignment::VERTICAL_CENTER);
-                // $activeSheet->freezePane($currentCellName.'3');  // 锁定表头，3 意味着锁定第3行上面的
+                $activeSheet->freezePane($currentCellName.'3');  // 锁定表头，3 意味着锁定第3行上面的
             }
             switch ($index) {
                 case 1:
