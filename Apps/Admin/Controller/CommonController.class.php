@@ -22,7 +22,7 @@ class CommonController extends Controller {
         $Input::noGPC();
 
         $settings = array(
-            "site_name"=>"Craymon Admin",
+            "site_name"=>"Crayon Admin",
             "attach_url"=>"./",
             "attach_path"=>"./data/attach/",
             "attr_allow_size"=>10240000,
@@ -140,7 +140,7 @@ class CommonController extends Controller {
             $styleThinBlackBorderOutline = array(  
                     'borders' => array (  
                         'outline' => array (  
-                                'style' => \PHPExcel_Style_Border::BORDER_MEDIUM,   //设置border样式
+                                'style' => \PHPExcel_Style_Border::BORDER_DASHED,   //设置border样式
                                 'color' => array ('argb' => 'FF9b9b9b'),          //设置border颜色  
                         ),  
                 ),  
@@ -155,7 +155,7 @@ class CommonController extends Controller {
                 $activeSheet->getStyle($currentCellName.'2')->getFont()->setSize(12)->setBold(true);
                 $activeSheet->getStyle($currentCellName.'2')->applyFromArray($styleThinBlackBorderOutline);  
                 $activeSheet->getStyle($currentCellName.'2')->getAlignment()->setVertical(\PHPExcel_Style_Alignment::VERTICAL_CENTER);
-                $activeSheet->freezePane($currentCellName.'3');  // 锁定表头，3 意味着锁定第3行上面的
+                // $activeSheet->freezePane($currentCellName.'3');  // 锁定表头，3 意味着锁定第3行上面的
             }
             switch ($index) {
                 case 1:
